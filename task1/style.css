@@ -1,0 +1,105 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    min-height:100vh;
+    padding:30px;
+}
+
+.container h1{
+    text-align:center;
+    color:white;
+    margin-bottom:30px;
+    font-size:3rem;
+}
+
+.filter-buttons{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.filter-buttons button{
+    padding:12px 25px;
+    border:none;
+    margin:5px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.filter-buttons button:hover,
+.filter-buttons .active{
+    background:#38bdf8;
+    color:white;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.image{
+    overflow:hidden;
+    border-radius:15px;
+    cursor:pointer;
+}
+
+.image img{
+    width:100%;
+    display:block;
+    transition:0.5s;
+}
+
+.image:hover img{
+    transform:scale(1.1);
+}
+
+#lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.95);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+#lightbox img{
+    width:80%;
+    max-width:900px;
+    border-radius:10px;
+}
+
+#close{
+    position:absolute;
+    top:20px;
+    right:35px;
+    color:white;
+    font-size:45px;
+    cursor:pointer;
+}
+
+#prev,#next{
+    position:absolute;
+    background:rgba(255,255,255,.2);
+    color:white;
+    border:none;
+    padding:15px;
+    cursor:pointer;
+    font-size:30px;
+    border-radius:50%;
+}
+
+#prev{
+    left:40px;
+}
+
+#next{
+    right:40px;
+}
